@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>智能终端系统 · 颐护小护</title>
+  <meta name="theme-color" content="#14231f">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="term-shell">
+  <div class="term-bar">
+    <button class="icon-btn" id="back" aria-label="返回">←</button>
+    <span class="url" id="url"></span>
+    <button class="icon-btn" id="reload" aria-label="刷新">⟳</button>
+    <a class="icon-btn" id="external" aria-label="用浏览器打开" target="_blank" rel="noopener">↗</a>
+  </div>
+
+  <div class="term-frame">
+    <iframe id="frame" title="智能终端系统" allow="camera; microphone; fullscreen"></iframe>
+
+    <div class="term-fallback" id="fallback">
+      <h2>暂时连不上终端系统</h2>
+      <p>请确认手机与树莓派连接同一个 Wi-Fi，并且设备上的服务已启动。</p>
+      <p class="muted" id="fallback-url" style="color:#6e8079;font-size:13px;word-break:break-all"></p>
+      <div class="cta-row" style="margin-top:16px">
+        <a class="btn btn-primary" id="open-browser" target="_blank" rel="noopener">用浏览器打开</a>
+        <button class="btn btn-ghost" id="copy-url">复制地址</button>
+      </div>
+      <button class="btn btn-ghost" id="retry" style="margin-top:10px">再试一次</button>
+    </div>
+  </div>
+
+  <div class="term-tip" id="tip">正在连接设备…</div>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/terminal.js"></script>
+</body>
+</html>
