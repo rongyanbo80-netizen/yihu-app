@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -13,11 +13,12 @@
 <body>
 
 <header class="detail-header">
-  <div class="wrap">
-    <a class="back" href="index.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-      返回首页
+  <div class="wrap detail-bar">
+    <a class="back-icon" href="index.html" aria-label="返回首页">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
     </a>
+    <span class="detail-bar-title" id="bar-title">智能陪护</span>
+    <span class="detail-bar-space" aria-hidden="true"></span>
   </div>
 </header>
 
@@ -26,7 +27,7 @@
     <div class="art" id="art"></div>
     <div class="detail-title">
       <span class="badge" id="badge"></span>
-      <h1 id="title">加载中…</h1>
+      <h1 id="title"></h1>
     </div>
     <p class="detail-lead" id="lead"></p>
   </section>
@@ -44,11 +45,18 @@
   <section class="block">
     <h2>流程示意</h2>
     <div class="flow" id="flow"></div>
-    <p class="flow-cap">上图：四步工作流程，虚线框表示设备端处理环节</p>
+    <div class="branch" id="branch"></div>
+    <p class="flow-cap">上图：四步主流程；下方为关键判断点的分支走向</p>
   </section>
 
   <section class="block">
-    <h2>关键参数</h2>
+    <h2>关键参数对比</h2>
+    <div class="bars" id="bars"></div>
+    <p class="flow-cap">条形长度按各自量程归一化，数值见右侧；部分指标为示意值</p>
+  </section>
+
+  <section class="block">
+    <h2>详细参数</h2>
     <table class="spec-table"><tbody id="specs"></tbody></table>
   </section>
 
