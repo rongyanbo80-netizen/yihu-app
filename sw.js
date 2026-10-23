@@ -1,5 +1,5 @@
-﻿/* sw.js —— 离线缓存：首次加载后断网也能用 */
-const CACHE = 'yihu-xiaohu-v1';
+/* sw.js —— 离线缓存：首次加载后断网也能用 */
+const CACHE = 'yihu-xiaohu-v2';
 
 const ASSETS = [
   './',
@@ -19,8 +19,8 @@ const ASSETS = [
   './assets/icons/apple-touch-icon.png'
 ];
 
-// 九个模块的图标与插画
-['fall', 'voice', 'ptz', 'gesture', 'object', 'remote', 'medicine', 'message', 'report'].forEach(function (id) {
+// 六个模块的图标与插画
+['fall', 'voice', 'ptz', 'gesture', 'object', 'remote'].forEach(function (id) {
   ASSETS.push('./assets/img/icon-' + id + '.svg');
   ASSETS.push('./assets/img/hero-' + id + '.svg');
 });
